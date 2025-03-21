@@ -1,0 +1,108 @@
+a = float(input())
+b = float(input())
+c = float(input())
+if a < b + c and b < a + c and c < a + b:
+    print('É um triângulo')
+    if a == b and b == c:
+        print('É equilatero')
+    elif a == b or a == c or b == c:
+        print('É isóceles')
+    else:
+        print('Escaleno')
+else:
+    print('não é')
+
+
+
+
+def bissextos():
+    ano = int(input("Insira o ano:"))
+    if ano % 4 == 0 or ano % 100 != 0 and ano % 400 == 0:
+              print("Ele é bissexto")
+    else:
+        print("Ele não é bissexto")
+        
+    
+while True:
+    bissextos()
+
+
+
+
+
+peixe = float(input('Insira o peso do peixe em quilos:'))
+excesso = 'ZERO'
+multa = 'ZERO'
+if peixe > 50:
+    excesso = peixe - 50
+    multa = excesso * 4
+    print(excesso,'quilos', multa,'reais' )
+else:
+    print(excesso, multa)
+    
+    
+
+
+
+n1 = int(input('n1:'))
+n2 = int(input('n2:'))
+n3 = int(input('n3:'))
+
+if n1 > n2 and n1 > n3:
+    print(n1)
+elif n2 > n1 and n2 > n3:
+    print(n2)
+else:
+    print(n3)
+
+
+
+
+
+
+
+n1 = int(input('n1:'))
+n2 = int(input('n2:'))
+n3 = int(input('n3:'))
+
+if n1 < n2 and n1 < n3:
+    print(n1)
+elif n2 < n1 and n2 < n3:
+    print(n2)
+else:
+    print(n3)
+
+
+
+
+
+
+
+salh = float(input('Quanto tu ganha por hora?'))
+hmes = int(input('Quantas horas tu trabalha por mês?'))
+salb = salh * hmes
+print('Salário bruto:',salb)
+sall = salb - salb * 0.11
+print('Salário apos imposto de renda:',sall)
+sall = sall - salb * 0.08
+print('Salário apos inss:',sall)
+sall = sall - salb * 0.05
+print('Salário Liquido após sindicato:',sall)
+
+
+
+
+
+
+
+m2 = int(input('Insira a area em m2 a ser pintada:'))
+if m2 % 54 != 0:
+    print(f'{m2 // 54 + 1} Lata Preço total {(m2 // 54 + 1)*80} Reais')
+else:
+    print(f'{m2 // 54} Lata Preço total {(m2 // 54)*80} Reais')
+
+
+
+
+
+
