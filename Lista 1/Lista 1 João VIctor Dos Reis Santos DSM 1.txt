@@ -1,0 +1,147 @@
+def soma():
+    número1 = float(input('Insira o primeiro número:'))
+    número2 = float(input('Insira o segundo número:'))
+    resultado = número1 + número2
+    print(resultado)
+
+while True:
+    soma()
+
+
+def contador():
+    DIAS = int(input('Insira o número de dias:'))
+    HORAS = int(input('Insira o número de horas:'))
+    MINUTOS = int(input('Insira o número de minutos:'))
+    SEGUNDOS = int(input('Insira o número de segundos:'))
+    VSEG = DIAS*86400 + HORAS*3600 + MINUTOS*60 + SEGUNDOS
+    print(VSEG)
+while True:
+    contador()
+    
+
+
+
+def contador():
+    DIAS = int(input('Insira o número de dias:'))
+    HORAS = int(input('Insira o número de horas:'))
+    MINUTOS = int(input('Insira o número de minutos:'))
+    SEGUNDOS = int(input('Insira o número de segundos:'))
+    VSEG = DIAS*86400 + HORAS*3600 + MINUTOS*60 + SEGUNDOS
+    print(VSEG)
+while True:
+    contador()
+    
+
+
+def calculadora():
+    Preço = float(input('Insira o valor do produto:'))
+    if Preço < 0:
+        print('Valor do produto abaixo de zero')
+    else:        
+        Desconto = float(input('Insira o valor do desconto:'))
+        if Desconto < 0:
+            print('Valor de percentual abaixo de zero')
+        else:
+            Preçof = Preço - (Preço/100)*Desconto
+            Descontof = Preço - Preçof
+            print(f'Valor do produto com o desconto:{Preçof}')
+            print(f'Valor do desconto:{Descontof}')
+while True:
+    calculadora()
+    
+
+
+def calculadora():
+    Preço = float(input('Insira o valor do produto:'))
+    if Preço < 0:
+        print('Valor do produto abaixo de zero')
+    else:        
+        Desconto = float(input('Insira o valor do desconto:'))
+        if Desconto < 0:
+            print('Valor de percentual abaixo de zero')
+        else:
+            Preçof = Preço - (Preço/100)*Desconto
+            Descontof = Preço - Preçof
+            print(f'Valor do produto com o desconto:{Preçof}')
+            print(f'Valor do desconto:{Descontof}')
+while True:
+    calculadora()
+    
+
+
+def calculadora():
+    d = float(input('Insira a distância em kms:'))
+    if d < 0:
+        print('Valor da distãncia abaixo de zero')
+    else:        
+        vm = float(input('Insira a velocidade média:'))
+        if vm < 0:
+            print('Velocidade média abaixo de zero')
+        else:
+            t = d/vm 
+            print(f'Tempo de viajem:{t}'' Horas')
+while True:
+    calculadora()
+    
+
+
+
+
+def calculadora():
+    n = float(input('Insira a temperatura em graus Celsius:'))
+    tf = 9 * n / 5 + 32
+    print(tf)
+while True:
+    calculadora()
+    
+
+
+
+
+def calculadora():
+    n = float(input('Insira a temperatura em Fahrenheit:'))
+    tc = (n-32) / 9 * 5
+    print(tc)
+while True:
+    calculadora()
+    
+
+
+
+def calculadora():
+    d = float(input('Insira a distância em kms:'))
+    t = int(input('Insira o número de dias alugados'))
+    if d < 0:
+        print('Valor da distãncia abaixo de zero')
+        if t < 0:
+            print('Número de dias abaixo de zero')
+    else:        
+        tp = t*60 + d*0.15
+        print(f'Total a pagar:{tp}')
+while True:
+    calculadora()
+    
+
+
+
+def calculadora():
+    n = int(input('Insira a quantidade de cigarros por dia:'))
+    t = float(input('Insira a quantos anos fuma:'))
+    if n < 0:
+        print('Quantidade de cigarros abaixo de zero')
+        if t < 0:
+            print('Tempo de fumo abaixo de zero')
+    else:        
+        tp = n*10/1440*t*365
+        print(f'Dias perdidos:{tp}')
+while True:
+    calculadora()
+    
+
+
+
+import sys
+sys.set_int_max_str_digits(500000)
+a = 2**1000000
+print(len(str(a)))
+
