@@ -1,0 +1,60 @@
+while True:
+    nota = int(input('insira sua nota: '))
+    if nota >= 0 and nota <= 10:
+        print('Nota Valida')
+        break
+    else:
+        print('nota invalida')
+    
+
+while True:
+    nome = input('Insira nome de usuario: ')
+    senha = input('Insira senha: ')
+    if nome != senha:
+        break
+    else:
+        print('Nome não pode ser igual a senha')
+
+
+anos = 0
+A = 80000
+B = 200000
+while True:
+    if A >= B:
+        print(anos, ' anos')
+        break
+    else:
+        A = A + A * 0.03
+        B = B + A * 0.015
+        anos = anos + 1
+
+
+N = int(input('Insira o numero: '))
+contador = 0
+f1 = 1
+f2 = 0
+while contador != N:
+    if contador % 2 == 0 and contador != 0:
+        print(f2)
+        f1 = f1 + f2
+    else:
+        print(f1)
+        f2 = f2 + f1
+    contador = contador + 1
+
+
+A = int(input('Numero 1: '))
+B = int(input('Numero 2: '))
+
+if a == 0 or b == 0:
+    print('Numero não pode ser igual a 0')
+else:
+    if b > a:
+        a, b = b, a
+    while b != 0:
+        c = a
+        a = b
+        b = c
+        b = c % b
+    print(a,'É o MDC')
+    
