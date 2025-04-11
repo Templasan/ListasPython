@@ -7,13 +7,7 @@
 # você pode ficar dormindo quando é feriado ou não é dia semana
 # retorne True ou False conforme você vá dormir ou não
 def dormir(dia_semana, feriado):
-  if feriado == True:
-    return True
-  else:
-    if dia_semana == False:
-      return True
-    else:
-      return False
+  return feriado == True or dia_semana == False
 
 # B. alunos_problema
 # temos dois alunos a e b
@@ -21,10 +15,7 @@ def dormir(dia_semana, feriado):
 # temos problemas quando ambos estão sorrindo ou ambos não estão sorrindo
 # retorne True quando houver problemas
 def alunos_problema(a_sorri, b_sorri):
-  if (a_sorri == True and b_sorri == True) or (a_sorri == False and b_sorri == False): return True
-  else: return False
-
-
+  return (a_sorri == True and b_sorri == True) or (a_sorri == False and b_sorri == False)
 # C. soma_dobro
 # dados dois números inteiros retorna sua soma
 # porém se os números forem iguais retorna o dobro da soma
@@ -33,6 +24,7 @@ def alunos_problema(a_sorri, b_sorri):
 def soma_dobro(a, b):
   if a == b: return a * 4
   else: return a + b
+
 
 # D. diff21
 # dado um inteiro n retorna a diferença absoluta entre n e 21
@@ -45,23 +37,19 @@ def diff21(n):
   if n > 21: return (n - 21) * 2
   else: return 21 - n
 
-
 # E. papagaio
 # temos um papagaio que fala alto
 # hora é um parâmetro entre 0 e 23
 # temos problemas se o papagaio estiver falando
 # antes da 7 ou depois das 20
 def papagaio(falando, hora):
-  if falando == True and (hora < 7 or hora > 20): return True
-  else: return False
-    
+  return falando == True and (hora < 7 or hora > 20)
 
 # F. dez
 # dados dois inteiros a e b
 # retorna True se um dos dois é 10 ou a soma é 10
 def dez(a, b):
-  if 10 in (a, b) or a+b == 10: return True
-  else: return False
+  return 10 in (a, b) or a+b == 10
 
 # G. dista10
 # seja um inteiro n
@@ -71,8 +59,7 @@ def dez(a, b):
 # dista10(90) -> True
 # dista10(89) -> False
 def dista10(n):
-  if abs(abs(n)-100) <= 10 or abs(abs(n)-200) <= 10: return True
-  else: return False
+  return abs(abs(n)-100) <= 10 or abs(abs(n)-200) <= 10
 
 # H. apaga
 # seja uma string s e um inteiro n
@@ -80,7 +67,7 @@ def dista10(n):
 # apaga('kitten', 1) -> 'ktten'
 # apaga('kitten', 4) -> 'kittn'
 def apaga(s, n):
-  
+  return s.replace(s[n], "", 1)
 
 # I. troca
 # seja uma string s
@@ -90,7 +77,13 @@ def apaga(s, n):
 # troca('a') -> 'a'
 # troca('ab') -> 'ba'
 def troca(s):
-  return 
+  c = ''
+  if len(s) <= 1:
+    return s
+  else:
+    s = list(s)
+    s[0], s[-1] = s[-1], s[0]
+    return c.join(s)
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
