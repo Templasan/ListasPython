@@ -13,10 +13,10 @@ def multstring(s, n):
 # string_splosion('abc') -> 'aababc'
 # string_splosion('ab') -> 'aab'
 def string_splosion(s):
-  b = []
-  for i in range(0, len(s)-1):
-    b = b.append(s[i])
-    return str(b)
+    x = ''
+    for i in range(len(s)+1):
+        x = x + s[:i]
+    return x
     
 
 # C. array_count9
